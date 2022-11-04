@@ -379,7 +379,7 @@ namespace ts {
             getCanonicalFileName: GetCanonicalFileName,
             useFileVersionAsSignature = state.useFileVersionAsSignature
         ) {
-            // If we have cached the result for this file, that means hence forth we should assume file shape is uptodate
+            // If we have cached the result for this file, that means hence forth we should assume file shape is up-to-date
             if (state.hasCalledUpdateShapeSignature?.has(sourceFile.resolvedPath)) return false;
 
             const info = state.fileInfos.get(sourceFile.resolvedPath)!;
@@ -536,7 +536,7 @@ namespace ts {
         }
 
         /**
-         * Return true if the file will invalidate all files because it affectes global scope
+         * Return true if the file will invalidate all files because it affects global scope
          */
         function isFileAffectingGlobalScope(sourceFile: SourceFile) {
             return containsGlobalScopeAugmentation(sourceFile) ||

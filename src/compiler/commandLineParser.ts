@@ -3392,7 +3392,7 @@ namespace ts {
      * @param basePath The base path for any relative file specifications.
      * @param options Compiler options.
      * @param host The host used to resolve files and directories.
-     * @param extraFileExtensions optionaly file extra file extension information from host
+     * @param extraFileExtensions optionally file extra file extension information from host
      */
     /* @internal */
     export function getFileNamesFromConfigSpecs(
@@ -3637,7 +3637,7 @@ namespace ts {
         if (match) {
             // We check this with a few `indexOf` calls because 3 `indexOf`/`lastIndexOf` calls is
             // less algorithmically complex (roughly O(3n) worst-case) than the regex we used to use,
-            // \/[^/]*?[*?][^/]*\/ which was polynominal in v8, since arbitrary sequences of wildcard
+            // \/[^/]*?[*?][^/]*\/ which was polynomial in v8, since arbitrary sequences of wildcard
             // characters could match any of the central patterns, resulting in bad backtracking.
             const questionWildcardIndex = spec.indexOf("?");
             const starWildcardIndex = spec.indexOf("*");

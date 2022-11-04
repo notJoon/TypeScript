@@ -7308,7 +7308,7 @@ namespace ts {
                         || (symbol.flags & SymbolFlags.Function && length(getPropertiesOfType(getTypeOfSymbol(symbol))))
                     ) && !(symbol.flags & SymbolFlags.Alias); // An alias symbol should preclude needing to make an alias ourselves
                     let needsExportDeclaration = !needsPostExportDefault && !isPrivate && isStringANonContextualKeyword(symbolName) && !isDefault;
-                    // `serializeVariableOrProperty` will handle adding the export declaration if it is run (since `getInternalSymbolName` will create the name mapping), so we need to ensuer we unset `needsExportDeclaration` if it is
+                    // `serializeVariableOrProperty` will handle adding the export declaration if it is run (since `getInternalSymbolName` will create the name mapping), so we need to ensure we unset `needsExportDeclaration` if it is
                     if (needsPostExportDefault || needsExportDeclaration) {
                         isPrivate = true;
                     }
@@ -7806,7 +7806,7 @@ namespace ts {
                         p => serializePropertySymbolForClass(p, /*isStatic*/ true, staticBaseType));
                     // When we encounter an `X.prototype.y` assignment in a JS file, we bind `X` as a class regardless as to whether
                     // the value is ever initialized with a class or function-like value. For cases where `X` could never be
-                    // created via `new`, we will inject a `private constructor()` declaration to indicate it is not createable.
+                    // created via `new`, we will inject a `private constructor()` declaration to indicate it is not creatable.
                     const isNonConstructableClassLikeInJsFile =
                         !isClass &&
                         !!symbol.valueDeclaration &&

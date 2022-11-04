@@ -75,7 +75,7 @@ namespace ts {
          */
         getOptionsDiagnostics(cancellationToken?: CancellationToken): readonly Diagnostic[];
         /**
-         * Get the diagnostics that dont belong to any file
+         * Get the diagnostics that don't belong to any file
          */
         getGlobalDiagnostics(cancellationToken?: CancellationToken): readonly Diagnostic[];
         /**
